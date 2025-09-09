@@ -1,0 +1,149 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border: 2px solid #c2c2c2;
+  padding: 15px;
+  width: 400px;
+  border-radius: 29px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  grid-template-rows: auto auto;
+  gap: 15px;
+  align-items: center;
+}
+
+.imageContainer {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+}
+
+.arrow {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.icons {
+  grid-column: 2;
+  grid-row: 1;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: rgba(118, 118, 118, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  border-radius: 14px;
+}
+
+.heartContainer {
+  position: relative;
+  width: 20px; /* Фиксируем ширину контейнера */
+  height: 20px; /* Фиксируем высоту контейнера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.heartOutline {
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.heartFilled {
+  font-size: 20px;
+  color: #d64141;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.heartContainer:hover .heartOutline {
+  opacity: 0;
+}
+
+.heartContainer:hover .heartFilled {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #9f41d6;
+}
+
+.textContainer {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: #fff;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comLogo {
+  margin: 0;
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+  background-color: cadetblue;
+  padding: 5px 10px;
+  border-radius: 14px;
+  font-size: 16px;
+  color: #ffffff;
+}
